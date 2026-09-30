@@ -1,0 +1,25 @@
+# Local environment and credentials — never commit these.
+.env
+.env.*
+!.env.example
+credentials*.json
+secrets*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.token
+*.tokens
+
+# Local operating policies can contain account-specific instructions.
+AGENTS.md
+
+# Machine-specific runtime output.
+data/
+logs/
+*.log
+
+# OS/editor files.
+.DS_Store
+Thumbs.db
+.vscode/
