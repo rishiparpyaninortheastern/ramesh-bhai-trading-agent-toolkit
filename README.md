@@ -1,38 +1,40 @@
 # Ramesh Bhai Trading Agent Toolkit
 
-A small, safety-first toolkit for operating and auditing a local, agent-assisted investing workflow. It contains notification and audit-log utilities—not brokerage credentials, account data, trading signals, or a promise of returns.
+An early, practical experiment in making an agent-assisted investing workflow easier to reason about. The goal is not to make markets feel predictable—they are not—but to make the boring operational parts visible, reviewable, and safer.
 
-> **Status:** The live-trading workflow is intentionally paused. This repository is published as a portfolio/project artifact and should be run in research or paper-trading mode unless a separate, explicit operating policy enables it.
+This repository contains notification and audit-log utilities, not brokerage credentials, account data, trading signals, or a promise of returns.
 
-## What is included
+> **Status:** Live trading is intentionally paused. This is a portfolio project and a small record of how I think about safe automation. It is designed for research or paper trading unless a separately reviewed policy explicitly enables execution.
 
-- A PowerShell utility for sending concise Discord status alerts.
-- A local JSONL event ledger with built-in redaction for common secrets and long numeric identifiers.
-- A terminal command to inspect recent agent events.
+## What’s here
+
+- A PowerShell utility for concise Discord status alerts.
+- A local JSONL event ledger that redacts common secrets and long numeric identifiers.
+- A quick terminal view of recent agent activity.
 - Git ignore rules that keep secrets, credentials, logs, and local operating policies out of source control.
 
-## Design principles
+## How I’m approaching it
 
-1. **No secrets in Git.** Webhook URLs, broker credentials, tokens, certificates, account information, and runtime logs stay local.
-2. **Human-readable audit trail.** Agents record plain-language decisions and outcomes before reporting them.
-3. **Least privilege.** Notification tooling reads its webhook only from an environment variable; it does not persist the value.
-4. **Research before execution.** Any brokerage integration should be isolated from research and should require a separately reviewed risk policy.
-5. **No performance claims.** Investing involves risk; this project is operational tooling, not investment advice.
+1. **Secrets stay local.** Webhook URLs, broker credentials, tokens, certificates, account information, and runtime logs do not belong in Git.
+2. **Decisions should be readable.** An agent should leave behind a plain-language explanation, not a mysterious trail of API calls.
+3. **Keep access narrow.** The alert utility reads its webhook from an environment variable and never stores it.
+4. **Research comes first.** Any brokerage integration should be separate from research and subject to its own reviewed risk policy.
+5. **No magic-return claims.** Investing carries risk. This is operational tooling, not investment advice.
 
 ## Quick start
 
-### Prerequisites
+### What you’ll need
 
 - Windows PowerShell 5.1+ or PowerShell 7+
 - A Discord webhook stored outside the repository, if alerts are desired
 
-Set the webhook only in your local user or process environment:
+If you want alerts, set the webhook in your local user or process environment:
 
 ```powershell
 $env:DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/…'
 ```
 
-Do not commit that value, add it to a prompt, or copy it into an issue or pull request.
+Please do not commit that value, add it to a prompt, or paste it into an issue or pull request.
 
 ### Send a test alert
 
@@ -69,7 +71,7 @@ scripts/
   get-agent-log.ps1       # Formats recent audit events for the terminal
 ```
 
-## Security checklist before publishing
+## Before you publish
 
 - [x] No webhook URL or brokerage credential is committed.
 - [x] No account balances, account numbers, order IDs, or runtime logs are committed.
@@ -77,10 +79,10 @@ scripts/
 - [x] Alert input is validated and audit summaries are redacted.
 - [ ] Review staged files before every push: `git diff --cached --check`
 
-## Project timeline
+## Project notes
 
-- **August 2026:** Initial local automation utilities, safety controls, and audit workflow created.
-- **September 2026:** Public-safe documentation and repository hygiene prepared.
+- **August 2026:** Built the first local automation utilities, safety controls, and audit workflow.
+- **September 2026:** Prepared the public-safe documentation and repository hygiene.
 
 ## Disclaimer
 

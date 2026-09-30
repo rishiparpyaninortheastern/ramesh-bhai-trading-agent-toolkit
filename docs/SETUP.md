@@ -2,24 +2,24 @@
 
 ## Scope
 
-This public repository contains only local notification and audit utilities. It does not include a brokerage client, a trading strategy engine, credentials, or user account data.
+This public repository is intentionally small. It contains local notification and audit utilities—not a brokerage client, a trading strategy engine, credentials, or user account data.
 
 ## Environment variables
 
-`send-discord-alert.ps1` reads the `DISCORD_WEBHOOK_URL` value from the current process first, then the current Windows user's environment variables. Store it through your operating-system secret-management approach; do not write it to this repository or any committed `.env` file.
+`send-discord-alert.ps1` reads `DISCORD_WEBHOOK_URL` from the current process first, then from the current Windows user’s environment variables. Keep it in your operating system’s secret-management flow; never write it to this repository or a committed `.env` file.
 
 ## Data handling
 
-The audit utility writes to `data/agent-events.jsonl`. That directory is ignored by Git because audit records can include operational context that is not appropriate for a public repository.
+The audit utility writes to `data/agent-events.jsonl`. Git ignores that directory because audit records can contain operational context that simply does not belong in a public repository.
 
-`write-agent-log.ps1` redacts common webhook URLs, access-token prefixes, credential assignments, and long numbers before writing. Treat redaction as a guardrail, not a substitute for reviewing summaries before logging them.
+`write-agent-log.ps1` redacts common webhook URLs, access-token prefixes, credential assignments, and long numbers before writing. Think of redaction as a seat belt, not an excuse to skip reviewing a summary before it is logged.
 
 ## Suggested development workflow
 
-1. Run tooling in paper-trading or research mode first.
-2. Use non-sensitive test messages when verifying Discord delivery.
-3. Inspect `git status` and `git diff --cached` before committing.
-4. Keep brokerage execution adapters in a separate private repository with an explicit risk policy and independent security review.
+1. Start in paper-trading or research mode.
+2. Use non-sensitive messages when testing Discord delivery.
+3. Check `git status` and `git diff --cached` before each commit.
+4. Keep any brokerage execution adapter in a separate private repository with an explicit risk policy and independent security review.
 
 ## Testing without a webhook
 
