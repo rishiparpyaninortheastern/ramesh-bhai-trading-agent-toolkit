@@ -30,7 +30,7 @@ That became the Ramesh Bhai Trading Agent Toolkit.
 
 ## What I built
 
-The public repository is intentionally modest. It does not include brokerage credentials, account information, execution code, or trading signals.
+The public repository is intentionally modest. You can explore it at [rishiparpyaninortheastern/ramesh-bhai-trading-agent-toolkit](https://github.com/rishiparpyaninortheastern/ramesh-bhai-trading-agent-toolkit). It does not include brokerage credentials, account information, execution code, or trading signals.
 
 Instead, it includes the operational pieces that I think are easy to skip when the headline is “AI can trade now”:
 
