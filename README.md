@@ -34,7 +34,7 @@ Most automation failures are not dramatic bugs. They are small omissions: a secr
 - Sensitive details should stay local by default.
 - A “no action” decision deserves a record too.
 
-For the longer project narrative—including what changed during the build and what I would tackle next—see [Project story](docs/PROJECT_STORY.md).
+For the longer project narrative—including what changed during the build and what I would tackle next—see [Project story](docs/PROJECT_STORY.md). A more conversational, Medium-ready draft is available in [Will Agents Take Over Investing?](docs/MEDIUM_DRAFT.md).
 
 ## Guardrails I kept coming back to
 
