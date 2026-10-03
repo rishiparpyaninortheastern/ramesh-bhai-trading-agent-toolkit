@@ -1,10 +1,26 @@
 # Ramesh Bhai Trading Agent Toolkit
 
+<p align="center">
+  <a href="https://github.com/rishiparpyaninortheastern">
+    <img src="https://github.com/rishiparpyaninortheastern.png?size=200" alt="Rishi Parpyani" width="100" height="100" />
+  </a>
+</p>
+
+<p align="center">
+  Built by <a href="https://github.com/rishiparpyaninortheastern">Rishi Parpyani</a> — backend systems, AI applications, and a healthy skepticism of black-box automation.
+</p>
+
 I started this as a small experiment: what would it take to make an agent-assisted investing workflow feel less like a black box?
 
 The answer was not a clever stock-picking model. It was the unglamorous work around it—clear boundaries, plain-English notes, a record of what happened, and a deliberate refusal to treat automation as a substitute for judgment. Markets are not predictable; this project is about making the operational parts visible, reviewable, and safer.
 
 This repository contains the public-safe notification and audit utilities from that experiment. It does **not** include brokerage credentials, account data, trading signals, or a promise of returns.
+
+## A note from the builder
+
+I like building systems that take an ambitious idea seriously without pretending the hard parts disappear. This project began with a question about agents and investing, then became a more practical exercise in boundaries: what should be automated, what should be recorded, and what should always remain a human decision?
+
+If you are exploring agentic systems, fintech infrastructure, or the small engineering details that make automation easier to trust, I would love to compare notes.
 
 > **Status:** Live trading is intentionally paused. This is a portfolio project and a small record of how I think about safe automation. It is designed for research or paper trading unless a separately reviewed policy explicitly enables execution.
 

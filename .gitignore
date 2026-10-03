@@ -23,3 +23,7 @@ logs/
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Local copy prepared for profile-photo upload; the public README references
+# the GitHub-hosted avatar instead of committing a personal image.
+profile-photo-github.jpg
