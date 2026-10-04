@@ -1,12 +1,6 @@
 # Ramesh Bhai Trading Agent Toolkit
 
 <p align="center">
-  <a href="https://github.com/rishiparpyaninortheastern">
-    <img src="https://github.com/rishiparpyaninortheastern.png?size=200" alt="Rishi Parpyani" width="100" height="100" />
-  </a>
-</p>
-
-<p align="center">
   Built by <a href="https://github.com/rishiparpyaninortheastern">Rishi Parpyani</a> — backend systems, AI applications, and a healthy skepticism of black-box automation.
 </p>
 
